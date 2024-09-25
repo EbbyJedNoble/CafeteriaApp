@@ -8,7 +8,7 @@ export default function SignUpButton({ styles, onPress }) {
 			mode="contained"
 			style={styles.signUpButton}
 			onPress={onPress}>
-			<Text>Sign Up</Text>
+			<Text>Sign Up test</Text>
 		</Button>
 	)
 }
