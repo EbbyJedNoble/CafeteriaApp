@@ -1,11 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { PaperProvider } from 'react-native-paper'
+import { AuthProvider } from './contexts/AuthContext'
+import TabStackScreen from './components/stackScreens/TabStackScreen'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	return (
+		<PaperProvider>
+			<SafeAreaProvider>
+				<AuthProvider>
+					<NavigationContainer>
+						<TabStackScreen />
+					</NavigationContainer>
+				</AuthProvider>
+			</SafeAreaProvider>
+		</PaperProvider>
+	)
 }
