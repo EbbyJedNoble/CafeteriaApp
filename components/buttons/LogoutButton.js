@@ -1,14 +1,14 @@
+import { View, Text } from 'react-native'
+import { Button } from 'react-native-paper'
 import React from 'react'
-import { Button, Text, useTheme } from 'react-native-paper'
 
-export default function LogoutButton({ onPress }) {
-	const { colors } = useTheme()
+export default function navLoginButton({ styles, onPress }) {
 	return (
 		<Button
 			mode="contained"
-			buttonColor={colors.error}
+			style={[styles.button, styles.menuButton]}
 			onPress={onPress}>
-			<Text>Log Out</Text>
+			<Text>Login</Text>
 		</Button>
 	)
 }
